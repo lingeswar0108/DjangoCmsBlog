@@ -1,0 +1,24 @@
+{% extends "base.html "%}
+{% load cms_tags %}
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center">Contact Form</h1>
+    <form method="post">
+        {%csrf_token%}
+        <div class="form-group ">
+        <label for="inlineFormInput">Name</label>
+        <input name="name"type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Enter Your Name">
+
+        <label for="exampleInputEmail1">Email address</label>
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email">
+        </div>
+
+        <label for="subject">Subject</label>
+        <textarea name="subject" id="subject" class="form-control" ></textarea>
+
+        <button type="submit" class="btn btn-dark my-2">Submit</button>
+      </form>
+</div>
+{%endblock%}
+
+
